@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website for Sahil Barnwal">
+  <title>Sahil Barnwal - Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    :root {
+      --primary-color: #00ab6c;
+      --secondary-color: #0073b1;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .section {
+      margin: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    .blog-item a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-item a:hover {
+      color: var(--primary-color);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .contact {
+      text-align: center;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #008c56;
+      transform: scale(1.05);
+    }
+
+    #skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill {
+      background-color: #e9ecef;
+      color: var(--text-color);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .skill:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="animate-title">Sahil Barnwal</h1>
+      <p class="tagline">Full-Stack Developer | Content Writer | AI Enthusiast</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="card">
+        <p>I'm a freelance web developer specializing in building professional websites and helping brands grow their online presence. With expertise in full-stack development, AI tools, and content creation, I have a passion for delivering high-quality solutions that make a real impact.</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div id="skills-container">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Python</span>
+        <span class="skill">AI Tools</span>
+        <span class="skill">Content Writing</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="card">
+        <h3>Tic-Tac-Toe Game</h3>
+        <p>A fun and interactive Tic-Tac-Toe game built using HTML, CSS, JavaScript, and Java. This project showcases my ability to create engaging web applications with smooth user interactions.</p>
+      </div>
+      <div class="card">
+        <h3>AI-Enhanced Personal Assistant Course</h3>
+        <p>An online course designed to help individuals leverage AI assistants for daily productivity and business success. This project combines my expertise in AI and content creation to deliver valuable knowledge to learners.</p>
+      </div>
+    </section>
+
+    <section class="section" id="blogs">
+      <h2 class="section-title">My Blogs on Medium</h2>
+      <div class="card blog-item">
+        <h3><a href="https://medium.com/@sahil-barnwal/how-ai-will-change-the-job-market-skills-you-need-to-survive-and-thrive-in-2030" target="_blank">How AI Will Change the Job Market: Skills You Need to Survive and Thrive in 2030</a></h3>
+        <p>Explore the future of AI and its impact on the job market, and learn the skills you'll need to stay competitive.</p>
+      </div>
+      <div class="card blog-item">
+        <h3><a href="https://medium.com/@sahil-barnwal/will-ronaldo-take-over-mrbeast-in-terms-of-subscribers" target="_blank">Will Ronaldo Take Over MrBeast in Terms of Subscribers?</a></h3>
+        <p>A deep dive into the rise of global personalities in the digital space and the competition for subscriber supremacy.</p>
+      </div>
+      <div class="card blog-item">
+        <h3><a href="https://medium.com/@sahil-barnwal/how-can-i-get-more-clicks-on-my-medium-com-blogs" target="_blank">How Can I Get More Clicks on My Medium.com Blogs?</a></h3>
+        <p>Sharing personal tips and strategies to increase the reach and visibility of your Medium blogs, with a focus on monetization.</p>
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number" id="views-count">0</div>
+          <div>Total Views</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="followers-count">0</div>
+          <div>Followers</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <p>Looking to collaborate or discuss opportunities? Reach out to me!</p>
+      <a href="https://www.linkedin.com/in/sahil-barnwal-" target="_blank" class="btn">Connect on LinkedIn</a>
+    </div>
+  </section>
+
+  <script>
+    // Animate title
+    anime.timeline({loop: false})
+      .add({
+        targets: '.animate-title',
+        opacity: [0, 1],
+        translateY: [50, 0],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 300 + 30 * i
+      });
+
+    // Animate stats
+    function animateValue(id, start, end, duration) {
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let minTimer = 50;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      stepTime = Math.max(stepTime, minTimer);
+      let startTime = new Date().getTime();
+      let endTime = startTime + duration;
+      let timer;
+
+      function run() {
+        let now = new Date().getTime();
+        let remaining = Math.max((endTime - now) / duration, 0);
+        let value = Math.round(end - (remaining * range));
+        obj.innerHTML = value;
+        if (value == end) {
+          clearInterval(timer);
+        }
+      }
+
+      timer = setInterval(run, stepTime);
+      run();
+    }
+
+    animateValue("views-count", 0, 50000, 2000);
+    animateValue("followers-count", 0, 2500, 2000);
+
+    // Intersection Observer for section animations
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
